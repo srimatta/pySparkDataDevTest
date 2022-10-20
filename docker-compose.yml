@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  pyspark:
+    image: jupyter/pyspark-notebook:latest
+    ports:
+      - "8888:8888"
+      - "4040-4080:4040-4080"
+    volumes:
+      - ./RawData:/rawdata
+      - ./PipelineData:/pipelinedata
+      - ./python:/python
